@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 DESIGN, QUANTITY, GROOM, BRIDE, DATE, EVENING, TIME, ADDRESS, PHONE, NAME, CONFIRM = range(11)
-ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID", "").strip()
+ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID", "").strip().lstrip("/")
 IMAGE_DIR = Path(__file__).resolve().parent / "RASM"
 DESIGNS = {
     "01": {"price": 12000, "label": "01 — 12 000 so‘m / dona"},
