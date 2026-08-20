@@ -85,7 +85,7 @@ async def choose_design(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
     design = query.data.split(":", 1)[1]
     context.user_data["design"] = design
     await query.message.reply_text(
-        f"✓ {DESIGNS[design]['label']} tanlandi.\n\nNechta xat kerak? Faqat son yozing.",
+        f"✓ {DESIGNS[design]['label']} tanlandi.\n\nNechta xat kerak? Sonni yozing.",
         reply_markup=answer_keyboard(),
     )
     return QUANTITY
@@ -126,10 +126,10 @@ async def address(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 async def quantity(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     try:
         count = int(update.message.text.strip())
-        if count < 1 or count > 100:
+        if count < 1:
             raise ValueError
     except ValueError:
-        await update.message.reply_text("⚠ Iltimos, 1 dan 100 gacha bo‘lgan son kiriting.", reply_markup=answer_keyboard())
+        await update.message.reply_text("⚠ Iltimos, xatlar sonini musbat son bilan yozing.", reply_markup=answer_keyboard())
         return QUANTITY
     context.user_data["quantity"] = count
     design = context.user_data["design"]
