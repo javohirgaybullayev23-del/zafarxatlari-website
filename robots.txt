@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://javohirgaybullayev23-del.github.io/zafarxatlari-website/sitemap.xml
