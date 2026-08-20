@@ -33,15 +33,10 @@ Railway’da loyiha ochib, shu GitHub repository’ni tanlang. Variables bo‘li
 
 - `BOT_TOKEN`
 - `ADMIN_CHAT_ID`
-- `PRICE_PER_LETTER` (ixtiyoriy, standart qiymat `25000`)
 
-Railway yangi commit kelganda botni qayta deploy qiladi va xatolik bo‘lsa qayta ishga tushiradi. `railway.toml` aynan shu restart siyosatini sozlaydi. Bepul tarifda platforma cheklovlari bo‘lishi mumkin; haqiqiy 24/7 uchun doimiy worker tarifi yoki VPS kerak.
+Railway yangi commit kelganda botni qayta deploy qiladi. `railway.toml` dagi `ALWAYS` siyosati process xato bilan yoki kutilmaganda to‘xtasa, uni qayta ishga tushiradi. Bu bot kompyuter o‘chiq bo‘lsa ham ishlashini ta’minlaydi. Railway hisobida worker ishlashi uchun tarif va billing cheklovlarini tekshiring; haqiqiy 24/7 uchun VPS yoki Railway’ning faol tarifi kerak bo‘lishi mumkin.
 
-Hostingda quyidagi environment variable larni qo‘ying:
-
-- `BOT_TOKEN`
-- `ADMIN_CHAT_ID`
-- `PRICE_PER_LETTER` (ixtiyoriy, standart qiymat `25000`)
+Bot kodi faqat `BOT_TOKEN` va `ADMIN_CHAT_ID` o‘zgaruvchilaridan foydalanadi. `PRICE_PER_LETTER` kerak emas.
 
 ## Sayt tugmasi
 
